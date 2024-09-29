@@ -1,0 +1,189 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\usepackage{multicol}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{11. Limits, Continuity and Differentiability }
+\author{S.Sai Akshitha - EE24BTECH11054}
+\newpage
+\maketitle
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{large}
+\textbf{Section-B JEE Main/AIEEE}
+\end{large}
+\begin{enumerate}
+    \item Let $f$ be differentiable for all $x$. If $f\brak{1}=-2$ and $f'\brak{x} \geq 2$ for $x \in [1,6]$, then   \hfill\sbrak{2005}
+    
+        \begin{enumerate}
+    \item $f\brak{6}\geq 8$ \item$f\brak{6} < 8$\item$f\brak{6} <5$\item$f\brak{6}=5$
+     \end{enumerate} 
+     
+    \item If $f$ is a real valued differentiable function satisfying $\lvert f\brak{x} -f\brak{y}\rvert$ $ \leq\brak{x-y}^2,x,y\in R$ and $f\brak{0}=0,$ then $f\brak{1}$ equals \hfill\sbrak{2005}
+     \begin{multicols}{4}
+        \begin{enumerate}
+     \item -1\item 0\item 2\item 1
+     \end{enumerate} 
+     \end{multicols}
+     
+    \item Let $f:R \to R$ be a function defined by\\$f\brak{x}$=min \{$x+1$,$\abs x$+1\}, Then which of the following is true? 
+      \hfill\sbrak{2007}
+     \begin{enumerate}
+     \item $f\brak{x}$ is differentiable everywhere.\item $f\brak{x}$ is not differentiable at $x=0$.\item $f\brak{x} \geq1$ for all $x\in R$.\item $f\brak{x}$ is not differentiable at $x=1$.
+     \end{enumerate}
+    \item The function $f:R-\{0\}\to R$ given by
+    \begin{align*}
+        f\brak{x}=\frac{1}{x}-\frac{2}{e^{2x}-1}
+    \end{align*} can be made continuous at $x=0$ by defining $f(0)$ as \hfill\sbrak{2007}
+     \begin{multicols}{4}
+         \begin{enumerate}
+     \item 0\item1\item 2\item -1
+     \end{enumerate}
+     \end{multicols}
+     
+    \item Let 
+         \[ f\brak{x}= \begin{cases}
+     \brak{x-1}\sin\frac{1}{x-1} & \text{ if $ x\neq1 $}\\
+     0 & \text{ if $ x = 1 $}
+  \end{cases}
+  \]
+    Then which of the following is true? 
+       \hfill\sbrak{2008}
+     \begin{enumerate}
+     \item $f$ is neither differentiable at $x=0$ nor at $x=1$.\item $f$ is differentiable at $x=0$ and $x=1$.\item $f$ is differentiable at $x=0$ but not at $x=1$.\item $f$ is differentiable at $x=1$ but not at $x=0$.
+     \end{enumerate}
+    \item Let $f:R\rightarrow R$ be a positive increasing function with
+     $\lim_{x\to\infty} \frac{f\brak{3x}}{f\brak{x}}=1$ . Then  $\lim_{x\to\infty} \frac{f\brak{2x}}{f\brak{x}}=$\hfill\sbrak{2010}
+     \begin{enumerate}
+     \begin{multicols}{4}
+     \item $\frac{2}{3}$ \item $\frac{3}{2}$ \item3 \item1 \end{multicols}
+     \end{enumerate}
+    \item  
+        \[ \lim_{x\to 2} \brak{\frac{\sqrt{1-\cos\brak{2\brak{x-2}}}}{x-2}}\]
+      \hfill\sbrak{2011}
+     \begin{multicols}{2}
+       \begin{enumerate}
+     \item equals $\sqrt{2}$ \item equals $-\sqrt{2}$ \item equals $\frac{1}{\sqrt{2}}$ \item does not exist
+     \end{enumerate}  
+     \end{multicols}
+     
+    \item The values of $p$ and $q$ for which the function 
+     \[ f\brak{x} = \begin{cases}
+  \frac{\sin\brak{p+1}x+\sin x}{x} & \text{ if $ x<0 $}\\\\
+  q & \text{ if $ x = 0 $}\\\\
+  \frac{\sqrt{x+x^2}-\sqrt{x}}{x^{3/2}} & \text{ if $ x> 0 $}
+  \end{cases}
+  \]
+    is  continuous for all x in R,are \hfill\sbrak{2011}
+     \begin{multicols}{2}
+         \begin{enumerate}
+       \item $p=\frac{5}{2}, q =\frac{1}{2}$
+       \item $p=-\frac{3}{2}, q=\frac{1}{2}$
+       \item $p=\frac{1}{2}, q = \frac{3}{2}$
+       \item $p=\frac{1}{2}, q = -\frac{3}{2}$
+     \end{enumerate}
+     \end{multicols}
+     
+    \item Let $f:R \to [0,\infty)$ be such that $\lim_{x\to 5} f\brak{x}$ exists and \[ \lim_{x\to 5} \frac{\brak{f\brak{x}}^2-9}{\sqrt{\lvert x-5\rvert}}=0.\]Then $ \lim_{x\to 5} f\brak{x}$ equals:
+     \begin{multicols}{4}
+         \begin{enumerate}
+     \item 0\item1\item2\item3
+     \end{enumerate}
+     \end{multicols}
+     
+    \item If $f:R\to R$ is a function defined by $f\brak{x}=\sbrak{x} \cos (\frac{2x-1}{2})\pi$, where $\sbrak{x}$ denotes greatest integer function,then $f$ is \hfill\sbrak{2012}
+     \begin{enumerate}
+     \item continuous for every real $x$. \item discontinuous only at $x=0$. \item discontinuous only at non-zero integral values of $x$. \item continuous only at $x=0$.
+     \end{enumerate}
+    \item Consider the function $f\brak{x}=$\(\lvert x-2\rvert\)+\(\lvert x-5\rvert\),$x\in R$.\\ \textbf{Statement-1:} $f'\brak{4}=0$\\ \textbf{Statement-2:} $f$ is continuous in [2,5], differentiable in (2,5) and $f\brak{2}=f\brak{5}.$ \hfill\sbrak{2012}
+     \begin{enumerate}
+     \item Statement-1 is false, Statement-2 is true. \item Statement-1 is true,Statement-2 is true; Statement-2 is correct explanation for Statement-1. \item Statement-1 is true, Statement-2 is true;Statement-2 is \textbf{not} a correct explanation for Statement-1. \item Statement-1 is true, Statement-2 is false.
+     \end{enumerate}
+    \item 
+        \[ \lim_{x \to 0} \frac{\brak{1-\cos2x}\brak{3+\cos x}}{x\tan4x} \]is equal to: \hfill[JEE M 2013]
+     \begin{multicols}{4}
+         \begin{enumerate}
+     \item -$\frac{1}{4}$ \item $\frac{1}{2}$  \item1 \item2 
+     \end{enumerate}
+     \end{multicols}
+     
+    \item 
+        \[ \lim_{x \to 0} \frac{\sin\brak{\pi\cos^{2}x}}{x^2}\] is equal to: \hfill[JEE M 2014]
+     \begin{multicols}{4}
+        \begin{enumerate}
+     \item $-\pi$ \item $\pi$ \item $\frac{\pi}{2}$ \item 1 
+     \end{enumerate} 
+     \end{multicols}
+     
+    \item \[ \lim_{x \to 0} \frac{\brak{1-\cos2x}\brak{3+\cos x}}{x\tan4x} \]is equal to: \hfill[JEE M 2015]
+     \begin{multicols}{4}
+        \begin{enumerate}
+     \item 2 \item$\frac{1}{2}$ \item4 \item3 
+        \end{enumerate} 
+     \end{multicols}
+    \item If the function
+     \[ g\brak{x} = \begin{cases}
+  x & \text{$, 0\leq x\leq3 $}\\
+  mx+2 & \text{$, 3<x\leq5 $}
+  \end{cases}
+  \]
+    is differentiable, then the value of k+m \\is : \hfill[JEE M 2015]
+     \begin{multicols}{4}
+       \begin{enumerate}  
+     \item $\frac{10}{3}$ \item 4 \item 2 \item $\frac{16}{5}$
+     \end{enumerate}  
+     \end{multicols}
+     
+\end{enumerate}    
+\end{document}
